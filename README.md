@@ -4,7 +4,7 @@ Temperature and humidity light intensity
 使用BH1750光照强度检测模块
 使用IIC通信协议完成传感器与单片机的数据传输
 
-1.数字光强度检测模块概述：
+1.BH1750数字光强度检测模块概述：
 
 引脚：VCC GND SCL SDA ADDR
 供电电压：3-5V
@@ -15,3 +15,14 @@ Temperature and humidity light intensity
 2.光强的检测过程
 
 实则是单片机与模块的通过I2C通信，使用GPIO口模拟I2C总线，并实现双向传输，则需一个输入输出口(SDA)，另外还需一个输出口(SCL)，不用stm32的IIC外设，自己模拟时序，但是还用这两个复用引脚PB10(SCL) PB11(SDA) 。
+
+3.DHT11温湿度检测模块
+
+湿度测量范围：20%-95%  湿度测量误差-+5%
+温度测量范围：0度-50度  温度测量误差：-+2度
+引脚：VCC DATE GND
+工作电压 3.3v-5v
+输出形式 数字输出
+
+4.温湿度采用单总线协议
+  实例中用到AD转换
