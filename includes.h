@@ -12,7 +12,7 @@
 #include "zi.h"
 #include "tu.h"
 #include "DHT11.h"
-#include "fire.h"
+#include "adc.h"
 #include "light.h"
 #include "IIC.h"
 #include "led.h"
